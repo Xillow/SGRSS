@@ -13,87 +13,146 @@ function displayRandomImages()
 {  
    //array of images with image location, height, and width  
    var imageArray = [  
-	{name: "Bath of Tefnut",   //name of the stage
-	//address URL of the image  
-    	src: "Pictures/Stage_Bathhouse_LRG.png",
+	{	name: "Bath of Tefnut",   //name of the stage
+		src: "Pictures/Stage_Bathhouse_LRG.png", 	//address URL of the image
+		LP: "#f7b136",	MP: "#f7b136",	HP: "#663522",
+		LK: "#663522",	MK: "#663522",	HK: "#663522",
 	},   
-    	{name: "Bath of Sekhmet",  
-    	src: "Pictures/Stage_Bathhouse_Blood_LRG.png",   
+    {	name: "Bath of Sekhmet",  
+		src: "Pictures/Stage_Bathhouse_Blood_LRG.png",
+		LP: "#f7b136", MP: "#663522", HP: "#663522",
+		LK: "#663522", MK: "#f7b136", HK: "#663522",   
 	},   
-	{name: "Boardwalk",
-    	src: "Pictures/Stage_Boardwalk_LRG.png",   
+	{	name: "Boardwalk",
+		src: "Pictures/Stage_Boardwalk_LRG.png",
+		LP: "#f7b136", MP: "#663522", HP: "#663522",
+		LK: "#663522", MK: "#663522", HK: "#f7b136",      
 	},
-	{name: "Class Notes",        
-    	src: "Pictures/Stage_ClassNotesAlt_LRG.png",   
+	{	name: "Class Notes",        
+		src: "Pictures/Stage_ClassNotesAlt_LRG.png",   
+		LP: "#663522", MP: "#f7b136", HP: "#f7b136",
+		LK: "#663522", MK: "#663522", HK: "#f7b136",   
 	},
-	{name: "Glass Canopy" ,   
-	src: "Pictures/Stage_Atrium_Night_LRG.png",   
+	{	name: "Glass Canopy" ,   
+		src: "Pictures/Stage_Atrium_Night_LRG.png",   
+		LP: "#f7b136", MP: "#663522", HP: "#f7b136",
+		LK: "#f7b136", MK: "#f7b136", HK: "#663522",   
 	},   
-	{name: "Grand Cathedral",   
-    	src: "Pictures/Stage_Cathedral_LRG.png",   
+	{	name: "Grand Cathedral",   
+		src: "Pictures/Stage_Cathedral_LRG.png",   
+		LP: "#663522", MP: "#f7b136", HP: "#663522",
+		LK: "#f7b136", MK: "#f7b136", HK: "#663522",   
 	},   
-	{name: "Grand Cathedral (Empty)",   
-	src: "Pictures/Stage_Cathedral_Empty_LRG.png",   
+	{	name: "Grand Cathedral (Empty)",   
+		src: "Pictures/Stage_Cathedral_Empty_LRG.png",   
+		LP: "#f7b136", MP: "#f7b136", HP: "#663522",
+		LK: "#f7b136", MK: "#f7b136", HK: "#663522",  
 	},   
-	{name: "Hilgard's Castle",  
-    	src: "Pictures/Stage_HilgardCastle_LRG.png",   
+	{	name: "Hilgard's Castle",  
+		src: "Pictures/Stage_HilgardCastle_LRG.png",   
+		LP: "#f7b136", MP: "#f7b136", HP: "#663522",
+		LK: "#663522", MK: "#663522", HK: "#f7b136",   
 	},
-	{name: "Lab 8",    
-	src: "Pictures/Stage_ASG_Lab_LRG.png",   
+	{	name: "Lab 8",    
+		src: "Pictures/Stage_ASG_Lab_LRG.png",   
+		LP: "#663522", MP: "#f7b136", HP: "#f7b136",
+		LK: "#663522", MK: "#f7b136", HK: "#663522",   
 	},
-	{name: "Lab 8 (Empty)",    
-	src: "Pictures/Stage_ASG_Lab_LRG.png",   
+	{	name: "Lab 8 (Empty)",    
+		src: "Pictures/Stage_ASG_Lab_LRG.png",   
+		LP: "#f7b136", MP: "#f7b136", HP: "#f7b136",
+		LK: "#663522", MK: "#f7b136", HK: "#663522",   
 	},	
-	{name: "Little Innsmouth",    
-	src: "Pictures/Stage_InnsmouthDay_LRG.png",   
+	{	name: "Little Innsmouth",    
+		src: "Pictures/Stage_InnsmouthDay_LRG.png",   
+		LP: "#663522", MP: "#663522", HP: "#f7b136",
+		LK: "#663522", MK: "#f7b136", HK: "#663522",   
 	},
-	{name: "Little Innsmouth (Night)",    
-	src: "Pictures/Stage_InnsmouthNight_LRG.png",   
+	{	name: "Little Innsmouth (Night)",    
+		src: "Pictures/Stage_InnsmouthNight_LRG.png",
+		LP: "#f7b136", MP: "#663522", HP: "#f7b136",
+		LK: "#663522", MK: "#f7b136", HK: "#663522",      
 	},
-	{name: "Maplecrest",    
-	src: "Pictures/Stage_Maplecrest_LRG.png",   
+	{	name: "Maplecrest",    
+		src: "Pictures/Stage_Maplecrest_LRG.png",   
+		LP: "#663522", MP: "#663522", HP: "#663522",
+		LK: "#f7b136", MK: "#f7b136", HK: "#663522",   
 	},
-	{name: "Medici Tower",    
-    	src: "Pictures/Stage_MediciTower_LRG.png",   
+	{	name: "Medici Tower",    
+    	src: "Pictures/Stage_MediciTower_LRG.png", 
+		LP: "#f7b136", MP: "#663522", HP: "#663522",
+		LK: "#f7b136", MK: "#663522", HK: "#663522",   
 	},
-	{name: "Meridian Area Rapid Transit",    
-	src: "Pictures/Stage_Train_LRG.png",   
+	{	name: "Meridian Area Rapid Transit",    
+		src: "Pictures/Stage_Train_LRG.png",   
+		LP: "#f7b136", MP: "#f7b136", HP: "#663522",
+		LK: "#663522", MK: "#f7b136", HK: "#663522",   
 	},
-	{name: "New Meridian Rooftops",    
-	src: "Pictures/Stage_RooftopsDay_LRG.png",   
+	{	name: "New Meridian Rooftops",    
+		src: "Pictures/Stage_RooftopsDay_LRG.png",   
+		LP: "#663522", MP: "#f7b136", HP: "#663522",
+		LK: "#f7b136", MK: "#663522", HK: "#663522",   
 	},
-	{name: "Nightmare Crest",    
-	src: "Pictures/Stage_Nightmare_Crest_LRG.png",   
+	{	name: "Nightmare Crest",    
+		src: "Pictures/Stage_Nightmare_Crest_LRG.png",   
+		LP: "#f7b136", MP: "#663522", HP: "#663522",
+		LK: "#f7b136", MK: "#f7b136", HK: "#663522",   
 	},
-	{name: "NMO Arena",    
-	src: "Pictures/Stage_Arena_LRG.png",   
+	{	name: "NMO Arena",    
+		src: "Pictures/Stage_Arena_LRG.png",
+		LP: "#663522", MP: "#663522", HP: "#f7b136",
+		LK: "#f7b136", MK: "#663522", HK: "#663522",      
 	},
-	{name: "NMO Arena (EVO)",    
-     	src: "Pictures/Stage_Arena_LRG.png",   
+	{	name: "EVO Arena",    
+    	src: "Pictures/Stage_Arena_LRG.png",   
+		LP: "#663522", MP: "#f7b136", HP: "#f7b136",
+		LK: "#f7b136", MK: "#663522", HK: "#663522",   
 	},
-	{name: "NMO Arena (SGCS 2024)",    
-	src: "Pictures/Stage_Arena_LRG.png",   
+	{	name: "SGCS Arena (2024)",    
+		src: "Pictures/Stage_Arena_LRG.png",   
+		LP: "#f7b136", MP: "#663522", HP: "#f7b136",
+		LK: "#f7b136", MK: "#663522", HK: "#663522",   
 	},
-	{name: "NMO Arena (Empty)",    
-	src: "Pictures/Stage_Arena_Empty_LRG.png",   
+	{	name: "NMO Arena (Empty)",    
+		src: "Pictures/Stage_Arena_Empty_LRG.png",   
+		LP: "#f7b136", MP: "#f7b136", HP: "#f7b136",
+		LK: "#f7b136", MK: "#663522", HK: "#663522",   
 	},
-	{name: "No Man's Land",    
-	src: "Pictures/Stage_No_Mans_Land_LRG.png",   
+	{	name: "No Man's Land",    
+		src: "Pictures/Stage_No_Mans_Land_LRG.png",   
+		LP: "#f7b136", MP: "#f7b136", HP: "#f7b136",
+		LK: "#f7b136", MK: "#f7b136", HK: "#663522",   
 	},
-	{name: "River King Casino",    
-	src: "Pictures/Stage_Casino_LRG.png",   
+	{	name: "River King Casino",    
+		src: "Pictures/Stage_Casino_LRG.png",   
+		LP: "#663522", MP: "#663522", HP: "#663522",
+		LK: "#f7b136", MK: "#f7b136", HK: "#f7b136",   
 	},
-	{name: "Sound Stage 15",    
-	src: "Pictures/Stage_SoundStage_LRG.png",   
+	{	name: "Sound Stage 15",    
+		src: "Pictures/Stage_SoundStage_LRG.png",   
+		LP: "#f7b136", MP: "#663522", HP: "#f7b136",
+		LK: "#663522", MK: "#663522", HK: "#663522",   
 	},
-	{name: "Streets of New Meridian",    
-     	src: "Pictures/Stage_NewMeridian_LRG.png",   
+	{	name: "Streets of New Meridian",    
+    	src: "Pictures/Stage_NewMeridian_LRG.png",   
+		LP: "#f7b136", MP: "#f7b136", HP: "#f7b136",
+		LK: "#663522", MK: "#663522", HK: "#663522",   
 	},
-	{name: "The Bunny Burrow",    
-     	src: "Pictures/Stage_Speakeasy_LRG.png",   
+	{	name: "The Bunny Burrow",    
+    	src: "Pictures/Stage_Speakeasy_LRG.png",   
+		LP: "#663522", MP: "#f7b136", HP: "#663522",
+		LK: "#663522", MK: "#663522", HK: "#f7b136",   
 	},
-	{name: "Under The Bridge",    
+	{	name: "Under The Bridge",    
     	src: "Pictures/Stage_Under_the_Bridge_LRG.png",   
+		LP: "#663522", MP: "#f7b136", HP: "#663522",
+		LK: "#663522", MK: "#f7b136", HK: "#663522",   
+	},
+	{
+		name: "Final Atrium",
+		src: "Pictures/Stage_FallingWreckage_LRG.png",
+		LP: "#663522", MP: "#663522", HP: "#f7b136",
+		LK: "#f7b136", MK: "#f7b136", HK: "#663522",
 	},
   ];  
       
@@ -101,6 +160,7 @@ function displayRandomImages()
     var arrayLength = imageArray.length;  
     var newImgArray = [];
 	var newParArray = [];
+	var newTblArray = [];
 	for (var i = 0; i < arrayLength; i++) {  
         newImgArray[i] = new Image();  
 		newParArray[i] = document.createElement("h1");
@@ -111,7 +171,64 @@ function displayRandomImages()
 		newImgArray[i].style.margin = '0 auto';
 		newParArray[i].textContent = imageArray[i].name;
 		newParArray[i].style.textAlign = 'center';
-    }
+		//purposefully chose not to use loops for the code below
+		newTblArray[i] = document.createElement("table");
+		tblBody = document.createElement("tbody");
+		row1 = document.createElement("tr");
+		cell1 = document.createElement("td");
+		cell2 = document.createElement("td");
+		cell3 = document.createElement("td");
+		cell1.appendChild(document.createTextNode('LP'));
+		cell2.appendChild(document.createTextNode('MP'));
+		cell3.appendChild(document.createTextNode('HP'));
+		cell1.style.fontSize = "xx-large";
+		cell2.style.fontSize = "xx-large";
+		cell3.style.fontSize = "xx-large";
+		cell1.style.padding = "10px";
+		cell2.style.padding = "10px";
+		cell3.style.padding = "10px";
+		cell1.style.fontWeight = "900";
+		cell2.style.fontWeight = "900";
+		cell3.style.fontWeight = "900";
+		cell1.style.backgroundColor = imageArray[i].LP;
+		cell2.style.backgroundColor = imageArray[i].MP;
+		cell3.style.backgroundColor = imageArray[i].HP;
+		row1.appendChild(cell1);
+		row1.appendChild(cell2);
+		row1.appendChild(cell3);		
+		row2 = document.createElement("tr");
+		cell4 = document.createElement("td");
+		cell5 = document.createElement("td");
+		cell6 = document.createElement("td");
+		cell4.appendChild(document.createTextNode('LK'));
+		cell5.appendChild(document.createTextNode('MK'));
+		cell6.appendChild(document.createTextNode('HK'));
+		cell4.style.fontSize = "xx-large";
+		cell5.style.fontSize = "xx-large";
+		cell6.style.fontSize = "xx-large";
+		cell4.style.padding = "10px";
+		cell5.style.padding = "10px";
+		cell6.style.padding = "10px";
+		cell4.style.fontWeight = "900";
+		cell5.style.fontWeight = "900";
+		cell6.style.fontWeight = "900";
+		cell4.style.backgroundColor =  imageArray[i].LK;
+		cell5.style.backgroundColor =  imageArray[i].MK;
+		cell6.style.backgroundColor =  imageArray[i].HK;
+		row2.appendChild(cell4);
+		row2.appendChild(cell5);
+		row2.appendChild(cell6);
+		tblBody.appendChild(row1);
+		tblBody.appendChild(row2);
+		tblBody.style.backgroundColor = "ffffff";
+		newTblArray[i].style.backgroundColor = "000000";
+		newTblArray[i].appendChild(tblBody);
+		//newTblArray[i].setAttribute("border", "4");		
+		newTblArray[i].style.margin = '0 auto';
+		
+		
+	}
+	
 	
 	var imgNo = 0;
   // create random image number  
@@ -127,14 +244,17 @@ function displayRandomImages()
   // remove the previous images  
   var images = document.getElementsByTagName('img'); 
   var paragraphs = document.getElementsByTagName('h1');  
+  var tables = document.getElementsByTagName('table');
   var l = images.length;  
   for (var p = 0; p < l; p++) {  
      images[0].parentNode.removeChild(images[0]);
 	 paragraphs[0].parentNode.removeChild(paragraphs[0]);
+	 tables[0].parentNode.removeChild(tables[0]);
   }  
   // display the new random image    
   document.body.appendChild(newImgArray[imgNo]);
   document.body.appendChild(newParArray[imgNo]);
+  document.body.appendChild(newTblArray[imgNo]);
 }  
 </script>  
   
