@@ -1,0 +1,210 @@
+<html>  
+<head>  
+<title>Skullgirls Random Stage Select</title>  
+<style>  
+body {  
+margin-top: 30px;  
+}  
+</style>   
+</head>  
+  
+<script>  
+function displayRandomImages()   
+{  
+   //array of images with image location, height, and width  
+   var imageArray = [  
+    {name: "Bath of Tefnut",   //name of the stage
+     //address URL of the image  
+     src: "Pictures/Stage_Bathhouse_LRG.png",  
+     //size for the image to be display on webpage  
+     width: "1125",  
+     height: "573",
+	 
+	 
+   },   
+    {name: "Bath of Sekhmet",  
+     src: "Pictures/Stage_Bathhouse_Blood_LRG.png",   
+     width: "1125",  
+     height: "573",
+	 
+   },   
+    {name: "Boardwalk",
+     src: "Pictures/Stage_Boardwalk_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	  
+   },
+	{name: "Class Notes",        
+     src: "Pictures/Stage_ClassNotesAlt_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Glass Canopy" ,   
+     src: "Pictures/Stage_Atrium_Night_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},   
+	{name: "Grand Cathedral",   
+     src: "Pictures/Stage_Cathedral_LRG.png",   
+     width: "1125",  
+     height: "573",   
+	},   
+	{name: "Grand Cathedral (Empty)",   
+     src: "Pictures/Stage_Cathedral_Empty_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},   
+	{name: "Hilgard's Castle",  
+     src: "Pictures/Stage_HilgardCastle_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Lab 8",    
+     src: "Pictures/Stage_ASG_Lab_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Lab 8 (Empty)",    
+     src: "Pictures/Stage_ASG_Lab_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},	
+	{name: "Little Innsmouth",    
+     src: "Pictures/Stage_InnsmouthDay_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Little Innsmouth (Night)",    
+     src: "Pictures/Stage_InnsmouthNight_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Maplecrest",    
+     src: "Pictures/Stage_Maplecrest_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Medici Tower",    
+     src: "Pictures/Stage_MediciTower_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Meridian Area Rapid Transit",    
+     src: "Pictures/Stage_Train_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "New Meridian Rooftops",    
+     src: "Pictures/Stage_RooftopsDay_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Nightmare Crest",    
+     src: "Pictures/Stage_Nightmare_Crest_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "NMO Arena",    
+     src: "Pictures/Stage_Arena_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "NMO Arena (EVO)",    
+     src: "Pictures/Stage_Arena_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "NMO Arena (SGCS 2024)",    
+     src: "Pictures/Stage_Arena_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "NMO Arena (Empty)",    
+     src: "Pictures/Stage_Arena_Empty_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "No Man's Land",    
+     src: "Pictures/Stage_No_Mans_Land_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "River King Casino",    
+     src: "Pictures/Stage_Casino_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Sound Stage 15",    
+     src: "Pictures/Stage_SoundStage_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Streets of New Meridian",    
+     src: "Pictures/Stage_NewMeridian_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "The Bunny Burrow",    
+     src: "Pictures/Stage_Speakeasy_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+	{name: "Under The Bridge",    
+     src: "Pictures/Stage_Under_the_Bridge_LRG.png",   
+     width: "1125",  
+     height: "573", 
+	},
+  ];  
+      
+    //find the length of the array of images  
+    var arrayLength = imageArray.length;  
+    var newImgArray = [];
+	var newParArray = [];
+	for (var i = 0; i < arrayLength; i++) {  
+        newImgArray[i] = new Image();  
+		newParArray[i] = document.createElement("h1");
+        newImgArray[i].src = imageArray[i].src;  
+        newImgArray[i].width = imageArray[i].width;  
+        newImgArray[i].height = imageArray[i].height;
+		newImgArray[i].style.display = 'block';
+		newImgArray[i].style.margin = '0 auto';
+		newParArray[i].textContent = imageArray[i].name;
+		newParArray[i].style.textAlign = 'center';
+    }
+	
+	var imgNo = 0;
+  // create random image number  
+  function getRandomNum(min, max)   
+  {  
+      // generate and return a random number for the image to be displayed   
+      imgNo = Math.floor(Math.random() * (max - min + 1)) + min;       
+  }    
+  
+  // 0 is first image and (preBuffer.length - 1) is last image of the array  
+  var newImage = getRandomNum(0, newImgArray.length - 1);  
+   
+  // remove the previous images  
+  var images = document.getElementsByTagName('img'); 
+  var paragraphs = document.getElementsByTagName('h1');  
+  var l = images.length;  
+  for (var p = 0; p < l; p++) {  
+     images[0].parentNode.removeChild(images[0]);
+	 paragraphs[0].parentNode.removeChild(paragraphs[0]);
+  }  
+  // display the new random image    
+  document.body.appendChild(newImgArray[imgNo]);
+  document.body.appendChild(newParArray[imgNo]);
+}  
+</script>  
+  
+<body>  
+<div>  
+<center>  
+<h2 style="color:green"> Skullgirls Stage Select </h2>  
+<h4> Press the button to Display a Stage </h4>  
+<button onclick="displayRandomImages();"> Random Stage </button>
+<p></p>  
+</center>   
+</div>  
+</body>  
+</html>  
